@@ -179,10 +179,7 @@ async def create_database():
         "CREATE TABLE IF NOT EXISTS pages (id INTEGER PRIMARY KEY, url TEXT NULL, title TEXT NULL)"
     )
 
-    # Commit the transaction
     await conn.commit()
-
-    # Close the connection
     await conn.close()
 
 
